@@ -1,21 +1,8 @@
 // Creación del componente Cupcake
-
-/* // Declaración tipo función
-function Cupcake({ sabor, color, foto }){ // Props -> Propiedades.
-    
-    return ( // Retorna la estructura de los cupcakes
-        <div>
-            <img src={ foto } alt={ sabor }/>
-            <h2>{ color }</h2>
-            <p>{ `Sabor: ${ sabor }` }</p>
-        </div>
-    )
-}
-*/
-
-// Declaración tipo clase
-
 import { Component } from 'react';
+
+/*
+// Declaración tipo clase
 
 class Cupcake extends Component {
 // Creamos los cupcakes, sus elementos y la lógica.
@@ -62,3 +49,68 @@ class Cupcake extends Component {
 } 
 
 export default Cupcake
+
+*/
+
+// Declaración tipo funcion
+
+// Para poder cambiar el estado de la app se requieren hooks, para eso necesitamos 
+// importar el hook useState desde react
+
+import { useState, useEffect } from 'react';
+
+const Cupcake = ({ foto, sabor, color }) => {
+
+    // UseState regresa un array, entonces debemos utilizar la destructurización para poder
+    // acceder a los elementos del array.
+    // El segundo parametro será una función para actualizar la variable estado. 
+    // Por convcención, se le llama set seguido del nombre de la variable.
+    const [vendido, setVendido] = useState(false); // Debemos poner el valor inicial!
+    // Creamos un estado extra para ver el useEffect hook
+    const [reservado, setReservado] = useState(false);
+
+    // definimos vender como una función anónima.
+    const vender = () => {
+        setVendido(true);
+        setReservado(true);
+    }
+    const reservar = () => setReservado(true);
+    
+
+    // A diferencia del anterior hook, useEffect puede ser llamada directamente. useEffect se ejecuta cada vez que se renderiza un componente.
+    // Recibe 2 parametros
+    // 1. una función que se ejecutará cuando el componente se monta.
+    // 2. un array con los elementos que se quieren observar.
+    useEffect(() => {
+        console.log('Componente montado', Date.now());
+    }, [reservado]);
+
+    return(
+        <div className='cupcake' id="test">
+            <img src={ foto } alt={ sabor }/>
+            <h2>{ color} </h2>
+            <p>{ `Sabor: ${ sabor }` }</p>
+
+            <p>
+                <b>Estado: </b>
+                { reservado ? "Reservado": "Libre" }
+            </p>
+            {
+                !reservado && <button id="botonReservar" onClick={ reservar }>Reservar</button>
+                
+            }
+
+            <p>
+                <b>Estado: </b>
+                { vendido ? "Vendido": "A la venta" }
+            </p>
+            {
+                !vendido && <button id="botonVender" onClick={ vender }>Comprar</button>
+
+            }
+        </div>
+    )
+
+}
+
+export default Cupcake;
