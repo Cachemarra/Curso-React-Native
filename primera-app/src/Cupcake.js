@@ -57,7 +57,8 @@ export default Cupcake
 // Para poder cambiar el estado de la app se requieren hooks, para eso necesitamos 
 // importar el hook useState desde react
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import "./cupcake.css";
 
 const Cupcake = ({ foto, sabor, color }) => {
 
@@ -69,25 +70,42 @@ const Cupcake = ({ foto, sabor, color }) => {
     // Creamos un estado extra para ver el useEffect hook
     const [reservado, setReservado] = useState(false);
 
+    // Creamos una referencia para el fotoCupcake
+    const fotoCupcake = useRef();
+
     // definimos vender como una función anónima.
     const vender = () => {
         setVendido(true);
         setReservado(true);
+
+        // Si ya se vendio ahora vamos a colorearlo de gris.
+        const elemento = fotoCupcake.current;
+        // Si ya se reservo, se añadirá la clase vendido a <img>
+        // y se pondra gris.
+        elemento.classList.replace('reservado', 'vendido');
     }
-    const reservar = () => setReservado(true);
     
+    // const reservar = () => setReservado(true);
+    const reservar = () => {
+        setReservado(true);
+
+        const elemento = fotoCupcake.current;
+        elemento.classList.add('reservado');
+    }
 
     // A diferencia del anterior hook, useEffect puede ser llamada directamente. useEffect se ejecuta cada vez que se renderiza un componente.
     // Recibe 2 parametros
     // 1. una función que se ejecutará cuando el componente se monta.
     // 2. un array con los elementos que se quieren observar.
     useEffect(() => {
-        console.log('Componente montado', Date.now());
-    }, [reservado]);
+        const element = fotoCupcake.current;
+        console.log(`Valor de elemento: ${element.classList}`);
+
+    }, [reservado, vendido]);
 
     return(
         <div className='cupcake' id="test">
-            <img src={ foto } alt={ sabor }/>
+            <img ref={ fotoCupcake } src={ foto } alt={ sabor }/>
             <h2>{ color} </h2>
             <p>{ `Sabor: ${ sabor }` }</p>
 

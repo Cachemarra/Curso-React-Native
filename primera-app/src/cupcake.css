@@ -1,0 +1,8 @@
+.vendido{
+    filter: grayscale(1);
+}
+
+
+.reservado{
+    filter: grayscale(0.5);
+}
