@@ -82,7 +82,8 @@ const Cupcake = ({ foto, sabor, color }) => {
         const elemento = fotoCupcake.current;
         // Si ya se reservo, se añadirá la clase vendido a <img>
         // y se pondra gris.
-        elemento.classList.replace('reservado', 'vendido');
+        elemento.classList.add('vendido');
+        elemento.classList.remove('reservado');
     }
     
     // const reservar = () => setReservado(true);
