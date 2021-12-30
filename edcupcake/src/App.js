@@ -1,7 +1,13 @@
+// imports
+import Header from "./Header";
+import "./styles/styles.scss";
+
 
 // Arrow function de la app
 const App = () => (
-  <h1>ED Cupcake</h1>
+
+  <Header/>
+
 )
 
 
