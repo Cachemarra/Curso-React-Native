@@ -1,3 +1,7 @@
+// Import of Link component to create a sigle page navigation
+import { Link } from 'react-router-dom';
+
+
 // File for the header
 const Header = () => (
     <header className="main-header">
@@ -10,9 +14,9 @@ const Header = () => (
       <div className="s-grid-1 lg-cols-3 s-cross-center s-main-end header-links">
         <nav className="main-menu" id="main-menu">
           <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/cupcakes">Cupcakes</a></li>
-            <li><a href="/nosotros">Nosotros</a></li>
+            <li><Link to="/">Inicio</Link></li>
+            <li><Link to="/cupcakes">Cupcakes</Link></li>
+            <li><Link to="/nosotros">Nosotros</Link></li>
           </ul>
         </nav>
         <div className="main-menu-toggle to-l" id="main-menu-toggle"></div>
