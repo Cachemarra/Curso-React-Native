@@ -1,0 +1,29 @@
+{
+    "cupcakes": [
+        {
+            "id": 1,
+            "sabor": "Vainilla",
+            "color": "Amarillo",
+            "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
+            "precio": "10.00",
+            "imagen": "https://i.pinimg.com/600x315/b5/3c/dd/b53cdd7bebad3c60289176c831766d2d.jpg"
+        },
+        {
+            "id": 2,
+            "sabor": "Chocolate",
+            "color": "Cafe",
+            "descripcion": "Delicioso cupcake de Chocolate con relleno de cacao",
+            "precio": "14.99",
+            "imagen": "https://www.vanillacupcakery.com.au/wp-content/uploads/2018/04/IMG_2314-256x256.jpg"
+        },
+        {
+            "id": 3,
+            "sabor": "Chocolomo",
+            "color": "Gold",
+            "descripcion": "Cupcake especial dorado sabor secreto: Chocolomo.",
+            "precio": "90.00",
+            "imagen": "https://www.hola.com/imagenes/cocina/recetas/20190910149038/cupcakes-chocolate-caramelo/0-717-246/cupcake-caramel-t.jpg"
+        }
+    ]
+}
+

@@ -116,7 +116,6 @@ const Cupcake = ({ foto, sabor, color }) => {
             </p>
             {
                 !reservado && <button id="botonReservar" onClick={ reservar }>Reservar</button>
-                
             }
 
             <p>
