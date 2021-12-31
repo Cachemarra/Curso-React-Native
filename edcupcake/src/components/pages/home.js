@@ -1,5 +1,7 @@
-const Home = () => (
+import Cupcakes from "./cupcakes";
 
+const Home = () => (
+<>
     <div className="main-banner img-container dark-color">
       <div className="ed-grid lg-grid-6">
         <div className="lg-cols-4 lg-x-2">
@@ -16,6 +18,8 @@ const Home = () => (
         </div>
       </div>
     </div>
+    <Cupcakes peticion="cupcakes?sabor_like=Chocolomo"/>
+</>
 )
 
 export default Home;

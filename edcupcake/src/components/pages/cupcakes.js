@@ -6,7 +6,7 @@ import Cupcake from "../cards/Cupcake";
 // Importo los hooks
 import { useState, useEffect } from "react";
 
-const Cupcakes = () => {
+const Cupcakes = ({ peticion }) => {
 
     // Hook useState para crear un state
     const [cupcakes, setCupcakes] = useState([])
@@ -16,7 +16,8 @@ const Cupcakes = () => {
     // Queremos que la primera vez que se cargue la pág, llame a la API
     useEffect(() => {
         // Nota, el fetch es una promesa
-        fetch("http://localhost:3050/cupcakes")
+        fetch(`${process.env.REACT_APP_URL_API}${peticion}`)
+        
         .then(response => response.json())
         .then(data => setCupcakes(data))
     }, [])
@@ -25,10 +26,11 @@ const Cupcakes = () => {
     return(
         <div className="ed-grid">
             <h1>Página de Cupcakes</h1>
+            <div >
             { // Añadimos validación para que no se muestre una pág vacia al inicio.
             // Se va a renderizar una vez que lleguen los datos
                 cupcakes ? (
-                    <section>
+                    <section className="ed-grid s-grid-2 m-grid-3 lg-grid-4 row-gap">
                     { // Vamos a recorrer un array para imprimir los cupcakes que recibamos
                         // Usamos .map para recorrer el array porque no modifica el nuevo, nos entrega un uevo array.
                         // Si lo recibimos como objeto ya lo destructuramos. es decir, en lugar de c => ponemos ({})
@@ -46,8 +48,9 @@ const Cupcakes = () => {
                     }
                     </section>
                 // Operador ternario. Si no ha llegado la data, muestra un "cargando..."
-                ) : (<span>Cargando...</span>)
+                ) : (<p>Cargando...</p>)
             }
+            </div>
         </div>
     )
 }
