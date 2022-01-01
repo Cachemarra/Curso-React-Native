@@ -1,12 +1,14 @@
 // Creación del componente Cupcakes
 // Estos se mostrarán en la pág Cupcakes dentro de pages/
 
+// Librerias y modulos
+import { get } from "axios";
 import Cupcake from "../cards/Cupcake";
 
 // Importo los hooks
 import { useState, useEffect } from "react";
 
-const Cupcakes = ({ peticion }) => {
+const Cupcakes = ({ peticion, title }) => {
 
     // Hook useState para crear un state
     const [cupcakes, setCupcakes] = useState([])
@@ -16,17 +18,17 @@ const Cupcakes = ({ peticion }) => {
     // Queremos que la primera vez que se cargue la pág, llame a la API
     useEffect(() => {
         // Nota, el fetch es una promesa
-        fetch(`${process.env.REACT_APP_URL_API}${peticion}`)
-        
-        .then(response => response.json())
-        .then(data => setCupcakes(data))
-    }, [])
+        get(`${process.env.REACT_APP_URL_API}${peticion}`)
+        .then(({data}) => setCupcakes(data))
+        // atrapamos los errores por si acaso
+        .catch(error => console.log(error)) // Leemos el error.
+    }, [peticion])
     
 
     return(
         <div className="ed-grid">
-            <h1>Página de Cupcakes</h1>
-            <div >
+            { title && <h1>Página de Cupcakes</h1> }
+
             { // Añadimos validación para que no se muestre una pág vacia al inicio.
             // Se va a renderizar una vez que lleguen los datos
                 cupcakes ? (
@@ -50,7 +52,6 @@ const Cupcakes = ({ peticion }) => {
                 // Operador ternario. Si no ha llegado la data, muestra un "cargando..."
                 ) : (<p>Cargando...</p>)
             }
-            </div>
         </div>
     )
 }
