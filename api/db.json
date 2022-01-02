@@ -129,6 +129,20 @@
             "imagen": "https://i.pinimg.com/600x315/b5/3c/dd/b53cdd7bebad3c60289176c831766d2d.jpg"
         }
 
+    ],
+    
+    "servicios": [
+        {
+            "id": 1,
+            "nombre": "Curso de Pastelería",
+            "descripcion": "Este es un curso desde 0 que te enseñara lo básico de pastelería!"
+        },
+        {
+            "id": 2,
+            "nombre": "Servicio a domicilio",
+            "descripcion": "Todos los pedidos tienen servicio a domicilio gratis!"
+        }
     ]
+
 }
 

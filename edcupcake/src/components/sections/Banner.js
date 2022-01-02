@@ -15,7 +15,7 @@ const Banner = () => {
                     />
                     <div className="main-banner__data s-center">
                         <p className="s-mb-0 t2">Cupcakes de Aguacate Factory</p>
-                        <p>Bienvenido a la pág de Aguacate Industry's. Aquí puede ver una lista de diversos cupcakes y un botón que no sirve pero puede presionar a placer.</p>
+                        <p>Bienvenido a la pág de Aguacate Industries. Aquí puede ver una lista de diversos cupcakes y un botón que no sirve pero puede presionar a placer.</p>
                         <a className="button" href="#">Botón inutil.</a>
                     </div>
                 </div>

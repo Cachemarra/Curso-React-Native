@@ -1,4 +1,5 @@
 # Librerias o paquetes necesarios:
-react
-json-server
-axios
+
+- react
+- json-server
+- axios
