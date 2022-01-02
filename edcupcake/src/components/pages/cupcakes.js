@@ -9,8 +9,12 @@ import Cupcake from "../cards/Cupcake";
 const Cupcakes = ({ peticion, title }) => {
 
     // utilizamos el hook useFetch para obtener los datos de la API
-    const cupcakes = useFetch(peticion);
+    const [cupcakes, error] = useFetch(peticion);
     
+    if(error){
+        console.log(error);
+        return <span>Hubo un error.</span>
+    }
 
     return(
         <div className="ed-grid">
