@@ -2,27 +2,14 @@
 // Estos se mostrarán en la pág Cupcakes dentro de pages/
 
 // Librerias y modulos
-import { get } from "axios";
+import useFetch from "../../hooks/useFetch";
 import Cupcake from "../cards/Cupcake";
 
-// Importo los hooks
-import { useState, useEffect } from "react";
 
 const Cupcakes = ({ peticion, title }) => {
 
-    // Hook useState para crear un state
-    const [cupcakes, setCupcakes] = useState([])
-
-
-    // Hook useEffect para cargar los datos
-    // Queremos que la primera vez que se cargue la pág, llame a la API
-    useEffect(() => {
-        // Nota, el fetch es una promesa
-        get(`${process.env.REACT_APP_URL_API}${peticion}`)
-        .then(({data}) => setCupcakes(data))
-        // atrapamos los errores por si acaso
-        .catch(error => console.log(error)) // Leemos el error.
-    }, [peticion])
+    // utilizamos el hook useFetch para obtener los datos de la API
+    const cupcakes = useFetch(peticion);
     
 
     return(

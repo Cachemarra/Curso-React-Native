@@ -19,7 +19,6 @@ const useFetch = (endpoint) => {
         .then(({data}) => setData(data))
     }, [endpoint])
 
-
     // Retornamos los datos obtenidos.
     return data;
 }

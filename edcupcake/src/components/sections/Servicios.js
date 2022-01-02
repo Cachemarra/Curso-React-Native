@@ -1,20 +1,11 @@
 // Componente para la sección de Servicios de la pág.
-import { useState, useEffect } from "react";
-import { get } from "axios";
+import useFetch from "../../hooks/useFetch"
 
 
 const Servicios = ({ peticion }) => {
-    const [servicios, setServicios] = useState()
 
-    useEffect(() => {
-        // Obtenemos la data de la API
-        get(`${process.env.REACT_APP_URL_API}${peticion}`)
-        .then(({data}) => setServicios(data))
-
-        console.log(servicios)
-
-
-    }, [peticion])
+    // utilizamos el hook useFetch para obtener los datos de la API
+    const servicios = useFetch(peticion);
 
     // Si no existe servicios regresamos un span indicando esto.
     if(!servicios)
