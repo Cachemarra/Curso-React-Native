@@ -11,6 +11,7 @@ const Cupcakes = ({ peticion, title }) => {
     // utilizamos el hook useFetch para obtener los datos de la API
     const [cupcakes, error] = useFetch(peticion);
     
+    // Mostramos cualquier error al hacer useFetch
     if(error){
         console.log(error);
         return <span>Hubo un error.</span>

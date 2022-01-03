@@ -5,15 +5,14 @@
             "sabor": "Vainilla",
             "color": "Amarillo",
             "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
-            "precio": "10.00",
-            "imagen": "https://i.pinimg.com/600x315/b5/3c/dd/b53cdd7bebad3c60289176c831766d2d.jpg"
+            "precio": 10.00
         },
         {
             "id": 2,
             "sabor": "Chocolate",
             "color": "Marrón",
             "descripcion": "Delicioso cupcake de Chocolate con relleno de cacao",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://www.vanillacupcakery.com.au/wp-content/uploads/2018/04/IMG_2314-256x256.jpg"
         },
         {
@@ -21,7 +20,7 @@
             "sabor": "Chocolomo",
             "color": "Gold",
             "descripcion": "Cupcake especial dorado sabor secreto: Chocolomo.",
-            "precio": "90.00",
+            "precio": 90.00,
             "imagen": "https://www.hola.com/imagenes/cocina/recetas/20190910149038/cupcakes-chocolate-caramelo/0-717-246/cupcake-caramel-t.jpg"
         },
         {
@@ -29,7 +28,7 @@
             "sabor": "Universo",
             "color": "Morado",
             "descripcion": "Cupcake secreto. Tiene un sabor que se describe como un beso de la misma Hera.",
-            "precio": "50.00",
+            "precio": 50.00,
             "imagen": "https://static.turbosquid.com/Preview/2020/02/16__08_13_24/RM.jpg7E362147-DD2F-4499-8793-604CB2957355Large.jpg"
         },
         {
@@ -37,7 +36,7 @@
             "sabor": "Moka",
             "color": "Cafe",
             "descripcion": "Delicioso cupcake de Moka con relleno de café",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://www.aguaeden.es/sites/default/files/blog_migrate/cupcakes_cafe.jpg"
         },
         {
@@ -45,7 +44,7 @@
             "sabor": "Chocomenta",
             "color": "Marrón",
             "descripcion": "Cupcake especial de chocolate con un toque de menta.",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://s1.1zoom.me/b5956/656/Cupcake_Coffee_White_background_Grain_Design_565755_3840x2400.jpg"
         },
         {
@@ -53,7 +52,7 @@
             "sabor": "Frutos Rojos",
             "color": "Rosa",
             "descripcion": "Delicioso cupcake de Frutos rojos con bayas reales.",
-            "precio": "19.99",
+            "precio": 19.99,
             "imagen": "https://www.tartasljubi.com/Catalogo/ArchProd/625_ArchProd/cupcakes-fruta.jpg"
         },
         {
@@ -61,7 +60,7 @@
             "sabor": "Oreo",
             "color": "Cafe oscuro",
             "descripcion": "Riquisimo cupcake de Oreo con relleno de chocolate.",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://www.comedera.com/wp-content/uploads/2021/02/cupcakes-de-oreo-2.jpg"
         },
         {
@@ -69,7 +68,7 @@
             "sabor": "Rose Quartz",
             "color": "Rosa",
             "descripcion": "Cupcake inspirado en Rose Quartz de fresa relleno de vainilla",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://img1.wsimg.com/isteam/ip/a9b57f58-3425-492c-8aad-e418638ac7d1/fb57109b-24e9-4e5c-b277-ddb7051f8b5f.jpg"
         },
         {
@@ -77,7 +76,7 @@
             "sabor": "Frutos Rojos",
             "color": "Rosa",
             "descripcion": "Delicioso cupcake de Frutos rojos con bayas reales.",
-            "precio": "19.99",
+            "precio": 19.99,
             "imagen": "https://www.tartasljubi.com/Catalogo/ArchProd/625_ArchProd/cupcakes-fruta.jpg"
         },
         {
@@ -85,7 +84,7 @@
             "sabor": "Oreo",
             "color": "Cafe oscuro",
             "descripcion": "Riquisimo cupcake de Oreo con relleno de chocolate.",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://www.comedera.com/wp-content/uploads/2021/02/cupcakes-de-oreo-2.jpg"
         },
         {
@@ -93,7 +92,7 @@
             "sabor": "Rose Quartz",
             "color": "Rosa",
             "descripcion": "Cupcake inspirado en Rose Quartz de fresa relleno de vainilla",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://img1.wsimg.com/isteam/ip/a9b57f58-3425-492c-8aad-e418638ac7d1/fb57109b-24e9-4e5c-b277-ddb7051f8b5f.jpg"
         },
         {
@@ -101,7 +100,7 @@
             "sabor": "Vainilla",
             "color": "Amarillo",
             "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
-            "precio": "10.00",
+            "precio": 10.00,
             "imagen": "https://i.pinimg.com/600x315/b5/3c/dd/b53cdd7bebad3c60289176c831766d2d.jpg"
         },
         {
@@ -109,7 +108,7 @@
             "sabor": "Chocolate",
             "color": "Marrón",
             "descripcion": "Delicioso cupcake de Chocolate con relleno de cacao",
-            "precio": "14.99",
+            "precio": 14.99,
             "imagen": "https://www.vanillacupcakery.com.au/wp-content/uploads/2018/04/IMG_2314-256x256.jpg"
         },
         {
@@ -117,7 +116,7 @@
             "sabor": "Chocolomo",
             "color": "Gold",
             "descripcion": "Cupcake especial dorado sabor secreto: Chocolomo.",
-            "precio": "90.00",
+            "precio": 90.00,
             "imagen": "https://www.hola.com/imagenes/cocina/recetas/20190910149038/cupcakes-chocolate-caramelo/0-717-246/cupcake-caramel-t.jpg"
         },
         {
@@ -125,7 +124,7 @@
             "sabor": "Vainilla",
             "color": "Amarillo",
             "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
-            "precio": "10.00",
+            "precio": 10.00,
             "imagen": "https://i.pinimg.com/600x315/b5/3c/dd/b53cdd7bebad3c60289176c831766d2d.jpg"
         }
 
@@ -143,6 +142,5 @@
             "descripcion": "Todos los pedidos tienen servicio a domicilio gratis!"
         }
     ]
-
 }
 
