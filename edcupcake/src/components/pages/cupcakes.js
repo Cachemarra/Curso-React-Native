@@ -28,15 +28,16 @@ const Cupcakes = ({ peticion, title }) => {
                     { // Vamos a recorrer un array para imprimir los cupcakes que recibamos
                         // Usamos .map para recorrer el array porque no modifica el nuevo, nos entrega un uevo array.
                         // Si lo recibimos como objeto ya lo destructuramos. es decir, en lugar de c => ponemos ({})
-                        cupcakes.map(({id, imagen, descripcion, color, precio, sabor}) => (
+                        cupcakes.map(({id, imagen, descripcion, color, precio, sabor, disponible}) => (
                             // Le damos las propiedades al Cupcake
                             <Cupcake 
                                 key={ id } // Es una clave única para cada cupcake. Aunque no lo pusieras debe de ponerse y no puede repetirse.
-                                imagen= { imagen }
+                                imagen={ imagen }
                                 descripcion={ descripcion }
                                 color={ color }
                                 precio={ precio }
                                 sabor={ sabor }
+                                disponible={ disponible }
                             /> 
                             ))
                     }

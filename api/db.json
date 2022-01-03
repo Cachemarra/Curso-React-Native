@@ -5,10 +5,12 @@
             "sabor": "Vainilla",
             "color": "Amarillo",
             "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
-            "precio": 10.00
+            "precio": 10.00,
+            "disponible": true
         },
         {
             "id": 2,
+            "disponible": true,
             "sabor": "Chocolate",
             "color": "Marrón",
             "descripcion": "Delicioso cupcake de Chocolate con relleno de cacao",
@@ -21,10 +23,12 @@
             "color": "Gold",
             "descripcion": "Cupcake especial dorado sabor secreto: Chocolomo.",
             "precio": 90.00,
-            "imagen": "https://www.hola.com/imagenes/cocina/recetas/20190910149038/cupcakes-chocolate-caramelo/0-717-246/cupcake-caramel-t.jpg"
+            "imagen": "https://www.hola.com/imagenes/cocina/recetas/20190910149038/cupcakes-chocolate-caramelo/0-717-246/cupcake-caramel-t.jpg",
+            "disponible": true
         },
         {
             "id": 4,
+            "disponible": true,
             "sabor": "Universo",
             "color": "Morado",
             "descripcion": "Cupcake secreto. Tiene un sabor que se describe como un beso de la misma Hera.",
@@ -33,6 +37,7 @@
         },
         {
             "id": 5,
+            "disponible": true,
             "sabor": "Moka",
             "color": "Cafe",
             "descripcion": "Delicioso cupcake de Moka con relleno de café",
@@ -41,6 +46,7 @@
         },
         {
             "id": 6,
+            "disponible": true,
             "sabor": "Chocomenta",
             "color": "Marrón",
             "descripcion": "Cupcake especial de chocolate con un toque de menta.",
@@ -49,6 +55,7 @@
         },
         {
             "id": 7,
+            "disponible": true,
             "sabor": "Frutos Rojos",
             "color": "Rosa",
             "descripcion": "Delicioso cupcake de Frutos rojos con bayas reales.",
@@ -57,6 +64,7 @@
         },
         {
             "id": 8,
+            "disponible": true,
             "sabor": "Oreo",
             "color": "Cafe oscuro",
             "descripcion": "Riquisimo cupcake de Oreo con relleno de chocolate.",
@@ -65,6 +73,7 @@
         },
         {
             "id": 9,
+            "disponible": true,
             "sabor": "Rose Quartz",
             "color": "Rosa",
             "descripcion": "Cupcake inspirado en Rose Quartz de fresa relleno de vainilla",
@@ -73,6 +82,7 @@
         },
         {
             "id": 10,
+            "disponible": true,
             "sabor": "Frutos Rojos",
             "color": "Rosa",
             "descripcion": "Delicioso cupcake de Frutos rojos con bayas reales.",
@@ -81,6 +91,7 @@
         },
         {
             "id": 11,
+            "disponible": true,
             "sabor": "Oreo",
             "color": "Cafe oscuro",
             "descripcion": "Riquisimo cupcake de Oreo con relleno de chocolate.",
@@ -89,6 +100,7 @@
         },
         {
             "id": 12,
+            "disponible": true,
             "sabor": "Rose Quartz",
             "color": "Rosa",
             "descripcion": "Cupcake inspirado en Rose Quartz de fresa relleno de vainilla",
@@ -97,6 +109,7 @@
         },
         {
             "id": 13,
+            "disponible": true,
             "sabor": "Vainilla",
             "color": "Amarillo",
             "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
@@ -105,6 +118,7 @@
         },
         {
             "id": 14,
+            "disponible": true,
             "sabor": "Chocolate",
             "color": "Marrón",
             "descripcion": "Delicioso cupcake de Chocolate con relleno de cacao",
@@ -113,6 +127,7 @@
         },
         {
             "id": 15,
+            "disponible": true,
             "sabor": "Chocolomo",
             "color": "Gold",
             "descripcion": "Cupcake especial dorado sabor secreto: Chocolomo.",
@@ -121,13 +136,13 @@
         },
         {
             "id": 16,
+            "disponible": true,
             "sabor": "Vainilla",
             "color": "Amarillo",
             "descripcion": "Delicioso cupcake de vainilla con relleno de crema",
             "precio": 10.00,
             "imagen": "https://i.pinimg.com/600x315/b5/3c/dd/b53cdd7bebad3c60289176c831766d2d.jpg"
         }
-
     ],
     
     "servicios": [
