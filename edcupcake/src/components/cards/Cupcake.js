@@ -8,12 +8,17 @@ import { number, string } from "prop-types";
 // Importamos un hook para checar si se reservo o no y para tener referencia de la imagen.
 import { useState, useRef, useEffect } from "react";
 
+import { put } from "axios";
+
+
 // Renderización del componente Cupcake
-const Cupcake = ({ descripcion, imagen, color, precio, sabor, disponible }) => {
+const Cupcake = ({ id, descripcion, imagen, color, precio, sabor, disponible }) => {
 
     // Configuramos los Hook
     const [vendido, setVendido] = useState(false);
     const [reservado, setReservado] = useState(false);
+    const [disponibilidad, setDisponibilidad] = useState(disponible);
+
 
     const refImagen = useRef();
 
@@ -21,12 +26,29 @@ const Cupcake = ({ descripcion, imagen, color, precio, sabor, disponible }) => {
     const vender = () => {
         setVendido(true);
         setReservado(true);
+        setDisponibilidad(false);
 
         // Cambiamos el color de la imagen con un filtro a grises.
         const elemento = refImagen.current;
 
         elemento.classList.add("vendido");
         elemento.classList.remove("reservado");
+
+        disponible = false;
+
+        // Actualizamos la base de datos
+        put(`${ process.env.REACT_APP_URL_API }cupcakes/${ id }`, 
+            {
+            "id": id,
+            "disponible": disponible,
+            "sabor": sabor,
+            "color": color,
+            "descripcion": descripcion,
+            "imagen": imagen,
+            "precio": precio
+        })
+        .then(response => console.log(response))
+        .catch(err => console.log(err));
     }
 
 
@@ -38,17 +60,48 @@ const Cupcake = ({ descripcion, imagen, color, precio, sabor, disponible }) => {
         elemento.classList.add("reservado");
     }
 
+
+    // Función para regresar el producto a la venta
+    const regresar = () => {
+        setVendido(false);
+        setReservado(false);
+        setDisponibilidad(true);
+
+        const elemento = refImagen.current;
+        elemento.classList.remove("vendido");
+        elemento.classList.remove("reservado");
+
+        disponible = true;
+
+        // Actualizamos la base de datos
+        put(`${ process.env.REACT_APP_URL_API }cupcakes/${ id }`, 
+            {
+            "id": id,
+            "disponible": disponible,
+            "sabor": sabor,
+            "color": color,
+            "descripcion": descripcion,
+            "imagen": imagen,
+            "precio": precio
+            })
+            .then(response => console.log(response))
+            .catch(err => console.log(err));
+    } 
+    
+
+
     // UseEffect para checar si se vendio o no.
     useEffect(() => {
         const elemento = refImagen.current;
         console.log(`Valor de elemento: ${elemento.classList}`);
-    }, [reservado, vendido]);
+
+    }, [reservado, vendido, disponible]);
 
 
     // Función para renderizar la sección de disponibilidad.
-    const renderDisponibilidad = (disponible) => {
+    const renderDisponibilidad = (disponibilidad) => {
         // Comprobamos si existe 'disponible'
-        if (disponible) {
+        if (disponibilidad) {
             return(
                 <div>
                     <p><b>Disponibilidad:</b> En existencia.</p>
@@ -61,6 +114,7 @@ const Cupcake = ({ descripcion, imagen, color, precio, sabor, disponible }) => {
             return(
                 <>
                     <p><b>Disponibilidad:</b> Temporalmente agotado.</p>
+                    <button id="botonRegresar" onClick={ regresar }>Regresar</button>
                 </>
             )
         }
@@ -74,7 +128,7 @@ const Cupcake = ({ descripcion, imagen, color, precio, sabor, disponible }) => {
             <span><p><b>Color:</b> { color }</p></span>
             <span><p><b>Precio:</b> { precio }</p></span>
             {   
-                renderDisponibilidad(disponible)
+                renderDisponibilidad(disponibilidad)
             }
         </div>
     )
@@ -87,7 +141,8 @@ Cupcake.propTypes = {
     descripcion: string.isRequired,
     imagen: string,
     sabor: string.isRequired,
-    disponible: bool.isRequired
+    disponible: bool.isRequired,
+    id: number.isRequired
 }
 
 // Definición de los valores default

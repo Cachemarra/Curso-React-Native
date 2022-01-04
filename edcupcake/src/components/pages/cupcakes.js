@@ -31,13 +31,14 @@ const Cupcakes = ({ peticion, title }) => {
                         cupcakes.map(({id, imagen, descripcion, color, precio, sabor, disponible}) => (
                             // Le damos las propiedades al Cupcake
                             <Cupcake 
-                                key={ id } // Es una clave única para cada cupcake. Aunque no lo pusieras debe de ponerse y no puede repetirse.
+                                id={ id } // Es una clave única para cada cupcake. Aunque no lo pusieras debe de ponerse y no puede repetirse.
                                 imagen={ imagen }
                                 descripcion={ descripcion }
                                 color={ color }
                                 precio={ precio }
                                 sabor={ sabor }
                                 disponible={ disponible }
+                                key={ id }
                             /> 
                             ))
                     }
@@ -48,7 +49,6 @@ const Cupcakes = ({ peticion, title }) => {
         </div>
     )
 }
-
 
 
 export default Cupcakes;
